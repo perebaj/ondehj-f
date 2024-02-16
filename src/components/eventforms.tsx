@@ -134,7 +134,7 @@ export default function EventForms({ onCancel }: { onCancel: () => void }) {
             />
             <div className="flex flex-col space-y-4">
               <Button variant="outline" onClick={onCancel} type="button">
-                <Link to="/">Cancelar</Link>
+                Cancelar
               </Button>
               <Button type="submit">Confirmar</Button>
             </div>
