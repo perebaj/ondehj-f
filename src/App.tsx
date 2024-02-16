@@ -30,9 +30,21 @@ export default function Home() {
               <Button>Adicionar Evento</Button>
             </div>
             <Separator />
-            <Event />
-            <Event />
-            <Event />
+            <Event
+              name="Moscoulância"
+              date={Date.now()}
+              instagramURL="https://www.instagram.com/jj_neno/"
+            />
+            <Event
+              name="Festa do Calouro"
+              date={Date.now()}
+              instagramURL="https://www.instagram.com/jj_neno/"
+            />
+            <Event
+              name="Festa da República Torpedo"
+              date={Date.now()}
+              instagramURL="https://www.instagram.com/jj_neno/"
+            />
           </div>
         </div>
       </div>

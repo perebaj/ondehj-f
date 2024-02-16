@@ -1,6 +1,16 @@
-import { ArrowBigUpDash, Instagram } from 'lucide-react'
+import 'moment/dist/locale/pt-br'
 
-export default function Event() {
+import { ArrowBigUpDash, Instagram } from 'lucide-react'
+import moment from 'moment'
+type EventProps = {
+  name: string
+  date: number
+  instagramURL: string
+}
+
+export default function Event(props: EventProps) {
+  moment.locale('pt')
+  const date = moment(props.date).format('LLLL')
   return (
     <div className="w-full divide-y overflow-hidden rounded-lg border border-gray-200">
       <div className="flex w-full items-center justify-between p-4">
@@ -14,10 +24,8 @@ export default function Event() {
             <p>100</p>
           </div>
           <div className="flex flex-1 flex-col">
-            <h3 className="font-base text-xl font-semibold">Moscoulância</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              15 de fevereiro de 2024 às 20:00
-            </p>
+            <h3 className="font-base text-xl font-semibold">{props.name}</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400">{date}</p>
           </div>
           <a
             className="inline-flex items-center rounded-md text-base underline underline-offset-2 hover:no-underline"
