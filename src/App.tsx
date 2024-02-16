@@ -34,12 +34,11 @@ export default function Home() {
             <div className="w-full divide-y overflow-hidden rounded-lg border border-gray-200">
               <div className="flex w-full items-center justify-between p-4">
                 <div className="flex w-full items-center space-x-4">
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center hover:cursor-pointer ">
                     <ArrowBigUpDash
                       size={'2rem'}
                       color="#0fe661"
                       strokeWidth={'0.1rem'}
-                      className="hover:selection:bg-gray-100 dark:hover:selection:bg-gray-800"
                     />
                     <p>100</p>
                   </div>
