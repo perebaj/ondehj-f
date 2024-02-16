@@ -52,10 +52,10 @@ export default function EventForms() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-[400px] rounded-lg bg-white p-4 shadow-lg">
+      <div className="w-full max-w-[25rem] rounded-lg bg-white p-4 shadow-lg">
         <h1 className="text-2xl font-bold">Criar evento</h1>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
               name="name"
@@ -106,14 +106,14 @@ export default function EventForms() {
                         <Button
                           variant={'outline'}
                           className={cn(
-                            'max-w-[400px] pl-3 text-left font-normal',
+                            'max-w-[25rem] pl-3 text-left font-normal',
                             !field.value && 'text-muted-foreground',
                           )}
                         >
                           {field.value ? (
                             format(field.value, 'PPP')
                           ) : (
-                            <span>Pick a date</span>
+                            <span>Escolha uma data</span>
                           )}
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                         </Button>
