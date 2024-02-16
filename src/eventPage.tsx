@@ -1,18 +1,25 @@
 import './globals.css'
 
-import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { useState } from 'react'
 
 import { Separator } from '@/components/ui/separator'
 
 import Event from './components/event'
+import EventForms from './components/eventforms'
 import { Button } from './components/ui/button'
-
 export default function EventPage() {
-  return (
-    <HelmetProvider>
-      <Helmet titleTemplate="%s | ondehoje?" />
+  const [showForm, setShowForm] = useState(false)
 
-      <div className="flex min-h-screen flex-col">
+  const handleCancel = () => {
+    setShowForm(false)
+  }
+
+  return (
+    <>
+      <div>{showForm && <EventForms onCancel={handleCancel} />}</div>
+      <div
+        className={`flex min-h-screen flex-col ${showForm ? 'blur-sm' : ''}`}
+      >
         <header className="py-6 text-center">
           <div className="container px-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -27,7 +34,11 @@ export default function EventPage() {
               <h1 className="px-4 py-4 text-3xl font-bold tracking-tighter">
                 Eventos
               </h1>
-              <Button>Adicionar Evento</Button>
+              <div>
+                <Button onClick={() => setShowForm(true)}>
+                  Adicionar Evento
+                </Button>
+              </div>
             </div>
             <Separator />
             <div className="space-y-4">
@@ -50,6 +61,6 @@ export default function EventPage() {
           </div>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   )
 }

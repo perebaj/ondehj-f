@@ -2,6 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { format } from 'date-fns'
 import { CalendarIcon } from 'lucide-react'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 import { z } from 'zod'
 
 import { Calendar } from '@/components/ui/calendar'
@@ -28,20 +29,16 @@ const formSchema = z.object({
   name: z.string().min(1, 'Nome do evento é obrigatório'),
   description: z.string().min(1, 'Descrição do evento é obrigatória'),
   date: z.date({ required_error: 'Data do evento é obrigatória' }),
-  // time: z.string().min(1),
-  // location: z.string().min(1),
   instagramURL: z.string(),
 })
 
-export default function EventForms() {
+export default function EventForms({ onCancel }: { onCancel: () => void }) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
       description: '',
-      // date: new Date(),
-      // time: '',
-      // location: '',
+
       instagramURL: '',
     },
   })
@@ -52,7 +49,7 @@ export default function EventForms() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-[25rem] rounded-lg bg-white p-4 shadow-lg">
+      <div className="w-full max-w-[40rem] rounded-lg bg-white p-4 shadow-lg">
         <h1 className="text-2xl font-bold">Criar evento</h1>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -106,7 +103,7 @@ export default function EventForms() {
                         <Button
                           variant={'outline'}
                           className={cn(
-                            'max-w-[25rem] pl-3 text-left font-normal',
+                            'w-full pl-3 text-left font-normal',
                             !field.value && 'text-muted-foreground',
                           )}
                         >
@@ -136,7 +133,9 @@ export default function EventForms() {
               )}
             />
             <div className="flex flex-col space-y-4">
-              <Button type="submit">Cancelar</Button>
+              <Button variant="outline" onClick={onCancel} type="button">
+                <Link to="/">Cancelar</Link>
+              </Button>
               <Button type="submit">Confirmar</Button>
             </div>
           </form>
