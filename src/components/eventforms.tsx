@@ -30,7 +30,7 @@ const formSchema = z.object({
   date: z.date({ required_error: 'Data do evento é obrigatória' }),
   // time: z.string().min(1),
   // location: z.string().min(1),
-  // instagramURL: z.string(),
+  instagramURL: z.string(),
 })
 
 export default function EventForms() {
@@ -42,7 +42,7 @@ export default function EventForms() {
       // date: new Date(),
       // time: '',
       // location: '',
-      // instagramURL: '',
+      instagramURL: '',
     },
   })
 
@@ -53,6 +53,7 @@ export default function EventForms() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div className="w-full max-w-[400px] rounded-lg bg-white p-4 shadow-lg">
+        <h1 className="text-2xl font-bold">Criar evento</h1>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormField
@@ -76,6 +77,18 @@ export default function EventForms() {
                   <FormLabel>Descrição</FormLabel>
                   <FormControl>
                     <Textarea placeholder="descrição" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              name="instagramURL"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Instagram @</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Instagram @ " {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

@@ -30,11 +30,7 @@ export default function EventPage() {
               <Button>Adicionar Evento</Button>
             </div>
             <Separator />
-            <Event
-              name="Moscoulância"
-              date={Date.now()}
-              instagramURL="https://www.instagram.com/jj_neno/"
-            />
+            <Event name="Moscoulância" date={Date.now()} />
             <Event
               name="Festa do Calouro"
               date={Date.now()}

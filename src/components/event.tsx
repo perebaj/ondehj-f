@@ -2,10 +2,11 @@ import 'moment/dist/locale/pt-br'
 
 import { ArrowBigUpDash, Instagram } from 'lucide-react'
 import moment from 'moment'
-type EventProps = {
+
+interface EventProps {
   name: string
   date: number
-  instagramURL: string
+  instagramURL?: string
 }
 
 export default function Event(props: EventProps) {
@@ -27,13 +28,15 @@ export default function Event(props: EventProps) {
             <h3 className="font-base text-xl font-semibold">{props.name}</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">{date}</p>
           </div>
-          <a
-            className="inline-flex items-center rounded-md text-base underline underline-offset-2 hover:no-underline"
-            href="https://www.instagram.com/jj_neno/"
-          >
-            <Instagram strokeWidth={'0.12rem'} className="mr-1.5 h-4 w-4" />
-            Instagram
-          </a>
+          {props.instagramURL && (
+            <a
+              className="inline-flex items-center rounded-md text-base underline underline-offset-2 hover:no-underline"
+              href={props.instagramURL}
+            >
+              <Instagram strokeWidth={'0.12rem'} className="mr-1.5 h-4 w-4" />
+              Instagram
+            </a>
+          )}
         </div>
       </div>
     </div>
