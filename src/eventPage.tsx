@@ -35,7 +35,7 @@ export default function EventPage() {
                 Eventos
               </h1>
               <div>
-                <Button onClick={() => setShowForm(true)}>
+                <Button variant="outline" onClick={() => setShowForm(true)}>
                   Adicionar Evento
                 </Button>
               </div>
