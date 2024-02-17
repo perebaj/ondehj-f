@@ -44,8 +44,8 @@ export default function EventForms({ onCancel }: { onCancel: () => void }) {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values)
+    onCancel()
   }
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div className="w-full max-w-[40rem] rounded-lg bg-white p-4 shadow-lg">
