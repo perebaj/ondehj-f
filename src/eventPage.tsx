@@ -18,48 +18,52 @@ export default function EventPage() {
     <>
       <div>{showForm && <EventForms onCancel={handleCancel} />}</div>
       <div
-        className={`flex min-h-screen flex-col ${showForm ? 'blur-sm' : ''}`}
+        className={`flex min-h-screen flex-col ${showForm ? 'blur-md' : ''}`}
       >
         <header className="py-6 text-center">
           <div className="container px-4">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h1 className="text-6xl font-bold tracking-tighter md:text-8xl">
               Onde Hoje?
             </h1>
           </div>
         </header>
-        <div className="lg:py-15 w-full space-y-6 py-6 md:py-4">
-          <div className="container grid px-4 md:gap-4 md:px-6 lg:gap-6 lg:px-8">
-            <div className="flex items-center space-x-4">
-              <h1 className="px-4 py-4 text-3xl font-bold tracking-tighter">
-                Eventos
-              </h1>
-              <div>
-                <Button variant="outline" onClick={() => setShowForm(true)}>
-                  Adicionar Evento
-                </Button>
-              </div>
+        {/* <div className="lg:py-15 w-full space-y-6 py-6 md:py-4"> */}
+        <div className="container grid">
+          <div className="flex items-center">
+            <h1 className="px-4 py-4 text-xl font-bold tracking-tighter md:text-4xl">
+              Eventos
+            </h1>
+            <div>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setShowForm(true)}
+              >
+                Adicionar Evento
+              </Button>
             </div>
-            <Separator />
-            <div className="space-y-4">
-              <Event
-                name="Moscoulância"
-                date={Date.now()}
-                instagramURL="https://www.instagram.com/jj_neno/"
-              />
-              <Event
-                name="Festa do Calouro"
-                date={Date.now()}
-                instagramURL="https://www.instagram.com/jj_neno/"
-              />
-              <Event
-                name="Festa da República Torpedo"
-                date={Date.now()}
-                instagramURL="https://www.instagram.com/jj_neno/"
-              />
-            </div>
+          </div>
+          <Separator />
+          <div className="space-y-4 px-8 py-8 ">
+            <Event
+              name="Moscoulância"
+              date={Date.now()}
+              instagramURL="https://www.instagram.com/jj_neno/"
+            />
+            <Event
+              name="Festa do Calouro"
+              date={Date.now()}
+              instagramURL="https://www.instagram.com/jj_neno/"
+            />
+            <Event
+              name="Festa da República Torpedo"
+              date={Date.now()}
+              instagramURL="https://www.instagram.com/jj_neno/"
+            />
           </div>
         </div>
       </div>
+      {/* </div> */}
     </>
   )
 }

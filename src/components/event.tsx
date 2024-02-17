@@ -20,35 +20,38 @@ export default function Event(props: EventProps) {
   }
 
   moment.locale('pt')
-  const date = moment(props.date).format('LLLL')
+  const date = moment(props.date).format('L')
   return (
     <div className="w-full divide-y overflow-hidden rounded-lg border border-gray-200">
-      <div className="flex w-full items-center justify-between p-4">
-        <div className="flex w-full items-center space-x-4">
-          <div className="flex flex-col items-center hover:cursor-pointer ">
-            <Button variant="ghost" onClick={handleCounter}>
-              <ArrowBigUpDash
-                size={'2rem'}
-                color="#0fe661"
-                strokeWidth={'0.1rem'}
-              />
-              <p>{counter}</p>
-            </Button>
-          </div>
-          <div className="flex flex-1 flex-col">
-            <h3 className="font-base text-xl font-semibold">{props.name}</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">{date}</p>
-          </div>
-          {props.instagramURL && (
-            <a
-              className="inline-flex items-center rounded-md text-base underline underline-offset-2 hover:no-underline"
-              href={props.instagramURL}
-            >
-              <Instagram strokeWidth={'0.12rem'} className="mr-1.5 h-4 w-4" />
-              Instagram
-            </a>
-          )}
+      <div className="flex w-full items-center justify-between space-x-4 p-4">
+        <div className="flex flex-col items-center hover:cursor-pointer ">
+          <Button variant="ghost" onClick={handleCounter}>
+            <ArrowBigUpDash
+              className="h-6 w-6 md:h-8 md:w-8"
+              color="#0fe661"
+              strokeWidth={'0.1rem'}
+            />
+            <p>{counter}</p>
+          </Button>
         </div>
+        <div className="flex flex-1 flex-col">
+          <h3 className="text-sm font-semibold md:text-2xl">{props.name}</h3>
+          <p className="text-[10px] text-gray-500 dark:text-gray-400 md:text-sm">
+            {date}
+          </p>
+        </div>
+        {props.instagramURL && (
+          <a
+            className="inline-flex items-center rounded-md text-[10px]  underline underline-offset-2 hover:no-underline md:text-base "
+            href={props.instagramURL}
+          >
+            <Instagram
+              strokeWidth={'0.12rem'}
+              className="mr-1.5 h-3 w-3 md:h-5 md:w-5"
+            />
+            Instagram
+          </a>
+        )}
       </div>
     </div>
   )

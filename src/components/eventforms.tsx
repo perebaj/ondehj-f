@@ -49,8 +49,8 @@ export default function EventForms({ onCancel }: { onCancel: () => void }) {
     toast.success('Evento criado com sucesso!')
   }
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-[40rem] rounded-lg bg-white p-4 shadow-lg">
+    <div className="fixed inset-0 z-50 flex items-center justify-center  p-4">
+      <div className=" w-full max-w-[40rem] rounded-lg bg-white p-4 shadow-lg">
         <h1 className="text-2xl font-bold">Criar evento</h1>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
