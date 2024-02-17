@@ -7,3 +7,7 @@ lint:
 .PHONY: run
 run:
 	npm run dev
+
+.PHONY: lint
+lint:
+	npx eslint .

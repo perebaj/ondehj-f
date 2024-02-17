@@ -27,7 +27,6 @@ export default function EventPage() {
             </h1>
           </div>
         </header>
-
         <div className="lg:py-15 w-full space-y-6 py-6 md:py-4">
           <div className="container grid px-4 md:gap-4 md:px-6 lg:gap-6 lg:px-8">
             <div className="flex items-center space-x-4">

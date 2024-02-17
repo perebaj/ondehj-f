@@ -2,6 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { format } from 'date-fns'
 import { CalendarIcon } from 'lucide-react'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 import { z } from 'zod'
 
 import { Calendar } from '@/components/ui/calendar'
@@ -45,6 +46,7 @@ export default function EventForms({ onCancel }: { onCancel: () => void }) {
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values)
     onCancel()
+    toast.success('Evento criado com sucesso!')
   }
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
