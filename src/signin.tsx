@@ -8,7 +8,7 @@ export default function SignIn() {
       <div className="flex items-center justify-start bg-red-100">
         <div className="mx-auto flex flex-col items-start justify-start gap-2 px-8">
           <div className="flex items-center gap-2 py-4">
-            <CheckCircle className="h-6 w-6 " />
+            <CheckCircle className="h-19 w-19" />
             <div className="text-xl">
               <span>Saiba de </span>
               <span className="text-w font-bold">todos os eventos </span>
@@ -16,7 +16,7 @@ export default function SignIn() {
             </div>
           </div>
           <div className="flex items-center gap-2 py-4">
-            <CheckCircle className="h-6 w-6 " />
+            <CheckCircle className="h-19 w-19" />
             <div className="text-xl">
               <span className="text-w font-bold">Promova e compartilhe </span>
               <span>seus eventos favoritos</span>
