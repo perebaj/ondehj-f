@@ -56,7 +56,7 @@ export default function EventPage() {
               instagramURL="https://www.instagram.com/jj_neno/"
             />
             <Event
-              name="Festa da República Torpedo"
+              name="Festa da República X"
               date={Date.now()}
               instagramURL="https://www.instagram.com/jj_neno/"
             />
