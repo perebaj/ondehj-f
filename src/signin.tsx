@@ -32,13 +32,13 @@ export default function SignIn() {
               Entre com sua conta para saber onde tem role hoje!
             </p>
           </div>
-          <div className="py-1/2 gap-2 space-y-2">
-            <Button className="w-full flex-auto justify-center">
-              <Mail className="mr-2 h-5 w-5" />
+          <div className="gap-2 space-y-2">
+            <Button className="w-full">
+              <Mail className=" mr-2 h-5 w-5" />
               <span>Sign in with Google</span>
             </Button>
             <Button className="w-full">
-              <Instagram className="mr-2 h-5 w-5" />
+              <Instagram className="ml-4 mr-2 h-5 w-5" />
               <span>Sign in with Instagram</span>
             </Button>
           </div>
