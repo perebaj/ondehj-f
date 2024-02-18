@@ -6,7 +6,7 @@ export default function SignIn() {
   return (
     <div className="grid h-screen grid-cols-2">
       <div className="flex items-center justify-start bg-red-100">
-        <div className="mx-auto flex flex-col items-start justify-start gap-2">
+        <div className="mx-auto flex flex-col items-start justify-start gap-2 px-8">
           <div className="flex items-center gap-2 py-4">
             <CheckCircle className="h-6 w-6 " />
             <div className="text-xl">
