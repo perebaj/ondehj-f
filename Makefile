@@ -3,6 +3,11 @@
 lint:
 	npx eslint ./src/
 
+## Install dependencies
+.PHONY: install
+install:
+	npm install
+
 ## Run the app
 .PHONY: run
 run:
