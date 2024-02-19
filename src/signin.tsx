@@ -25,21 +25,21 @@ export default function SignIn() {
         </div>
       </div>
       <div className="flex items-center justify-center bg-white">
-        <div className="mx-auto max-w-[15rem] space-y-6 md:max-w-[20rem]">
+        <div className="mx-auto max-w-full space-y-6 md:max-w-[20rem]">
           <div className="space-y-2 text-center">
             <h1 className="front-bold text-4xl md:text-5xl">Sign-In</h1>
             <p className="px-8 text-[10px] text-gray-500 md:text-sm">
               Entre com sua conta para saber onde tem role hoje!
             </p>
           </div>
-          <div className="gap-2 space-y-2 px-8">
+          <div className="gap-2 space-y-2 px-4">
             <Button className="w-full">
               <Mail className=" mr-2 h-5 w-5" />
-              <span>Sign in with Google</span>
+              <span className="whitespace-normal">Sign in with Google</span>
             </Button>
             <Button className="w-full">
               <Instagram className="mr-2 h-5 w-5" />
-              <span>Sign in with Instagram</span>
+              <span className="whitespace-normal">Sign in with Instagram</span>
             </Button>
           </div>
         </div>
