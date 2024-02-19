@@ -9,37 +9,37 @@ export default function SignIn() {
         <div className="mx-auto flex flex-col items-start justify-start gap-2 px-8">
           <div className="flex items-center gap-2 py-4">
             <CheckCircle className="h-19 w-19" />
-            <div className="text-xl">
+            <div className="text-sm md:text-xl">
               <span>Saiba de </span>
-              <span className="text-w font-bold">todos os eventos </span>
-              <span>que estão acontecendo hoje</span>
+              <span className="font-bold">todos os eventos </span>
+              <span>que estão acontecendo</span>
             </div>
           </div>
           <div className="flex items-center gap-2 py-4">
             <CheckCircle className="h-19 w-19" />
-            <div className="text-xl">
-              <span className="text-w font-bold">Promova e compartilhe </span>
+            <div className="text-sm md:text-xl">
+              <span className="font-bold">Promova e compartilhe </span>
               <span>seus eventos favoritos</span>
             </div>
           </div>
         </div>
       </div>
       <div className="flex items-center justify-center bg-white">
-        <div className="mx-auto max-w-[20rem] space-y-6">
+        <div className="mx-auto max-w-full space-y-6 md:max-w-[20rem]">
           <div className="space-y-2 text-center">
-            <h1 className="front-bold text-xl md:text-3xl">SignIn</h1>
-            <p className="text-sm text-gray-500">
+            <h1 className="front-bold text-4xl md:text-5xl">Sign-In</h1>
+            <p className="px-8 text-[10px] text-gray-500 md:text-sm">
               Entre com sua conta para saber onde tem role hoje!
             </p>
           </div>
-          <div className="gap-2 space-y-2">
+          <div className="gap-2 space-y-2 px-4">
             <Button className="w-full">
               <Mail className=" mr-2 h-5 w-5" />
-              <span>Sign in with Google</span>
+              <span className="whitespace-normal">Sign in with Google</span>
             </Button>
             <Button className="w-full">
-              <Instagram className="ml-4 mr-2 h-5 w-5" />
-              <span>Sign in with Instagram</span>
+              <Instagram className="mr-2 h-5 w-5" />
+              <span className="whitespace-normal">Sign in with Instagram</span>
             </Button>
           </div>
         </div>
