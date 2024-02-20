@@ -1,4 +1,19 @@
-import { PartyPopper } from 'lucide-react'
+import { Check, PartyPopper } from 'lucide-react'
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 
 import { Button } from './components/ui/button'
 export default function Landing() {
@@ -13,10 +28,14 @@ export default function Landing() {
             </a>
           </div>
           <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-12">
-            <a href="/#prcing" className="no-underline hover:underline">
+            <a href="/#pricing" className="no-underline hover:underline">
               Preço
             </a>
-            <a className="no-underline hover:underline" href="/#faq">
+            <a
+              className="no-underline hover:underline"
+              title="FAQ"
+              href="/#faq"
+            >
               FAQ
             </a>
           </div>
@@ -27,7 +46,7 @@ export default function Landing() {
           </div>
         </nav>
       </header>
-      <section>
+      <section id="info">
         <div className="relative z-10  mx-auto flex  max-w-5xl flex-col items-center justify-center gap-16 px-8 py-12 lg:gap-20 lg:py-32">
           <div className="relative flex flex-col items-center justify-center gap-10 text-center lg:gap-12">
             <h1 className="text-4xl tracking-tight md:-mb-4 lg:text-6xl">
@@ -53,7 +72,121 @@ export default function Landing() {
               <a href="/sign-in">Onde é o rolê hoje?</a>
             </Button>
           </div>
-          {/* <div className="relative mx-auto flex w-full max-w-lg flex-col items-center gap-16 md:gap-24"></div> */}
+        </div>
+      </section>
+
+      <section id="pricing">
+        <div className="mx-auto flex max-w-7xl flex-col gap-12 px-8 py-24 md:flex-row">
+          <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 px-8 py-12 lg:gap-12 lg:py-32">
+            <h1 className="text-4xl">
+              Preço{' '}
+              <span className="font-black italic tracking-tight text-primary">
+                Único
+              </span>{' '}
+            </h1>
+            <div>
+              <Card className="max-h-7xl mx-auto flex max-w-7xl flex-col items-center text-center">
+                <CardHeader>
+                  <CardTitle>R$ 30 no PIX</CardTitle>
+                  <CardDescription>
+                    Acesso ilimitado por{' '}
+                    <span className="text-base font-extrabold text-green-600">
+                      1 Ano
+                    </span>
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-sm lg:text-base">
+                    <li className="flex items-center justify-center py-4">
+                      <Check size={24} strokeWidth={1} />
+                      <span>Acesso a todos os eventos da sua universidade</span>
+                    </li>
+                    <li className="flex items-center justify-center py-4">
+                      <Check size={24} strokeWidth={1} />
+                      <span>Promova e crie quantos eventos quiser</span>
+                    </li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Button variant={'outline'}>
+                    <a href="/sign-in">Compre Agora</a>
+                  </Button>
+                </CardFooter>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="faq">
+        <div className="mx-auto flex max-w-7xl flex-col gap-12 px-8 py-24 md:flex-row">
+          <div className="flex basis-1/2 flex-col text-left">
+            <p className="mb-4 inline-block font-semibold text-primary">FAQ</p>
+            <p className="text-3xl font-extrabold sm:text-4xl">
+              Perguntas Frequentes
+            </p>
+          </div>
+          <ul className="basis-1/2">
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="font-bold text-primary">
+                  O que é o Onde Hoje?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p>
+                    O Onde Hoje é uma plataforma que reúne todos os eventos
+                    esportivos, culturais e festas da sua universidade em um só
+                    lugar.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="font-bold text-primary">
+                  Para que público o Onde Hoje é destinado?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p>
+                    O onde hoje é uma tentativa de aproximar os alunos de
+                    universidades pelo Brasil, para que eles possam{' '}
+                    <span className="font-bold">
+                      compartilhar, criar e participar {''}
+                    </span>
+                    de eventos em suas universidades.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="font-bold text-primary">
+                  O onde hoje é pago?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p>
+                    <span className="font-bold">Sim. </span>O onde hoje cobra
+                    uma
+                    <span className="font-bold">
+                      {' '}
+                      taxa ANUAL de R$ 30,00 Conto{' '}
+                    </span>
+                    para todos os usuários.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger className="font-bold text-primary">
+                  É possivel vender ingressos no onde hoje?
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p>
+                    <span className="font-bold">Não. </span>O Onde Hoje é uma
+                    <span className="font-bold">
+                      {' '}
+                      plataforma de divulgação de eventos,{' '}
+                    </span>
+                    não é possível vender ingressos diretamente pela plataforma.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </ul>
         </div>
       </section>
     </div>
