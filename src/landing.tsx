@@ -49,7 +49,9 @@ export default function Landing() {
                 <span>📢</span> Promova e compartilhe seus eventos favoritos
               </li>
             </ul>
-            <Button size={'lg'}>Onde é o rolê hoje?</Button>
+            <Button size={'lg'}>
+              <a href="/sign-in">Onde é o rolê hoje?</a>
+            </Button>
           </div>
           {/* <div className="relative mx-auto flex w-full max-w-lg flex-col items-center gap-16 md:gap-24"></div> */}
         </div>
