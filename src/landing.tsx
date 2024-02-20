@@ -128,7 +128,7 @@ export default function Landing() {
           <ul className="basis-1/2">
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
-                <AccordionTrigger className="font-bold text-primary">
+                <AccordionTrigger className="text-start font-bold text-primary">
                   O que é o Onde Hoje?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -140,7 +140,7 @@ export default function Landing() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="font-bold text-primary">
+                <AccordionTrigger className="text-start font-bold text-primary">
                   Para que público o Onde Hoje é destinado?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -155,7 +155,7 @@ export default function Landing() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger className="font-bold text-primary">
+                <AccordionTrigger className="text-start font-bold text-primary">
                   O onde hoje é pago?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -171,7 +171,7 @@ export default function Landing() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger className="font-bold text-primary">
+                <AccordionTrigger className="text-start font-bold text-primary">
                   É possivel vender ingressos no onde hoje?
                 </AccordionTrigger>
                 <AccordionContent>
