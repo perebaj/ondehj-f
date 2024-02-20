@@ -1,45 +1,33 @@
-import { CheckCircle, Instagram, Mail } from 'lucide-react'
+import { Mail, PartyPopper } from 'lucide-react'
 
 import { Button } from './components/ui/button'
 
 export default function SignIn() {
   return (
-    <div className="grid h-screen grid-cols-2">
-      <div className="flex items-center justify-start bg-red-100">
-        <div className="mx-auto flex flex-col items-start justify-start gap-2 px-8">
-          <div className="flex items-center gap-2 py-4">
-            <CheckCircle className="h-19 w-19" />
-            <div className="text-sm md:text-xl">
-              <span>Saiba de </span>
-              <span className="font-bold">todos os eventos </span>
-              <span>que estão acontecendo</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 py-4">
-            <CheckCircle className="h-19 w-19" />
-            <div className="text-sm md:text-xl">
-              <span className="font-bold">Promova e compartilhe </span>
-              <span>seus eventos favoritos</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="flex items-center justify-center bg-white">
-        <div className="mx-auto max-w-full space-y-6 md:max-w-[20rem]">
-          <div className="space-y-2 text-center">
-            <h1 className="front-bold text-4xl md:text-5xl">Sign-In</h1>
-            <p className="px-8 text-[10px] text-gray-500 md:text-sm">
-              Entre com sua conta para saber onde tem role hoje!
+    <div className="font-Fredoka">
+      <div className="container flex h-screen w-screen flex-col items-center justify-center">
+        <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+          <div className="flex flex-col items-center space-y-2 text-center">
+            <PartyPopper size={38} />
+            <h1 className="text-3xl ">
+              Bem vindo ao{' '}
+              <span className="font-semibold tracking-wide text-primary">
+                Onde Hoje!
+              </span>
+            </h1>
+            <p className="text-sm text-gray-500">
+              Encontre todos os eventos da sua universidade em um só lugar
             </p>
           </div>
-          <div className="gap-2 space-y-2 px-4">
-            <Button className="w-full">
-              <Mail className=" mr-2 h-5 w-5" />
-              <span className="whitespace-normal">Sign in with Google</span>
-            </Button>
-            <Button className="w-full">
-              <Instagram className="mr-2 h-5 w-5" />
-              <span className="whitespace-normal">Sign in with Instagram</span>
+
+          <div className="grid gap-6">
+            <Button variant="outline">
+              <a
+                href="/auth/google"
+                className="flex items-center justify-center gap-2"
+              >
+                <Mail size={20} /> Entrar com Google
+              </a>
             </Button>
           </div>
         </div>
