@@ -75,7 +75,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <section id="pricing">
+      <section id="pricing" className="bg-slate-100">
         <div className="mx-auto flex max-w-7xl flex-col gap-12 px-8 py-24 md:flex-row">
           <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 px-8 py-12 lg:gap-12 lg:py-32">
             <h1 className="text-4xl">
@@ -83,11 +83,15 @@ export default function Landing() {
               <span className="font-black italic tracking-tight text-primary">
                 Único
               </span>{' '}
+              <span>e</span>
+              <span className="font-black italic tracking-tighter text-primary">
+                Transparente
+              </span>
             </h1>
             <div>
               <Card className="max-h-7xl mx-auto flex max-w-7xl flex-col items-center text-center">
                 <CardHeader>
-                  <CardTitle>R$ 30 no PIX</CardTitle>
+                  <CardTitle className="text-4xl">R$ 30 no PIX</CardTitle>
                   <CardDescription>
                     Acesso ilimitado por{' '}
                     <span className="text-base font-extrabold text-green-600">
@@ -156,7 +160,7 @@ export default function Landing() {
               </AccordionItem>
               <AccordionItem value="item-3">
                 <AccordionTrigger className="text-start font-bold text-primary">
-                  O onde hoje é pago?
+                  O Onde Hoje é pago?
                 </AccordionTrigger>
                 <AccordionContent>
                   <p>
@@ -164,15 +168,15 @@ export default function Landing() {
                     uma
                     <span className="font-bold">
                       {' '}
-                      taxa ANUAL de R$ 30,00 Conto{' '}
+                      taxa ANUAL de R$ 30,00 Conto,{' '}
                     </span>
-                    para todos os usuários.
+                    <span> por usuário. </span>
                   </p>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
                 <AccordionTrigger className="text-start font-bold text-primary">
-                  É possivel vender ingressos no onde hoje?
+                  É possivel vender ingressos no Onde Hoje?
                 </AccordionTrigger>
                 <AccordionContent>
                   <p>
