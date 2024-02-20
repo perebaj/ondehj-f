@@ -8,8 +8,8 @@ export default function SignIn() {
       <div className="container flex h-screen w-screen flex-col items-center justify-center">
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col items-center space-y-2 text-center">
-            <PartyPopper size={28} />
-            <h1 className="text-2xl ">
+            <PartyPopper size={38} />
+            <h1 className="text-3xl ">
               Bem vindo ao{' '}
               <span className="font-semibold tracking-wide text-primary">
                 Onde Hoje!
