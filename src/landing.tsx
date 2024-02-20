@@ -3,8 +3,8 @@ import { PartyPopper } from 'lucide-react'
 import { Button } from './components/ui/button'
 export default function Landing() {
   return (
-    <div>
-      <header className="font-Fredoka bg-slate-50">
+    <div className="font-Fredoka">
+      <header className="bg-slate-50">
         <nav className="mx-auto flex max-w-7xl items-center justify-center px-8 py-3">
           <div className="flex lg:flex-1">
             <a href="/" className="flex shrink-0 items-center gap-2">
@@ -22,12 +22,12 @@ export default function Landing() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Button size={'sm'}>
-              <a href="/sign-in">Sign in</a>
+              <a href="/sign-in">Entrar</a>
             </Button>
           </div>
         </nav>
       </header>
-      <section className="font-Fredoka">
+      <section>
         <div className="relative z-10  mx-auto flex  max-w-5xl flex-col items-center justify-center gap-16 px-8 py-12 lg:gap-20 lg:py-32">
           <div className="relative flex flex-col items-center justify-center gap-10 text-center lg:gap-12">
             <h1 className="text-4xl tracking-tight md:-mb-4 lg:text-6xl">
