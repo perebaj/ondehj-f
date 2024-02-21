@@ -16,10 +16,9 @@ import {
 export default function Billing() {
   return (
     <div className="font-Fredoka">
-      {/* <DashboardHeader /> */}
       <Dialog>
         <DialogTrigger>Assinatura</DialogTrigger>
-        <DialogContent className="max-w-3xl">
+        <DialogContent className="max-w-xs lg:max-w-2xl">
           <DialogHeader>
             <div className="flex flex-col items-center justify-center gap-2 px-4 py-4">
               <DialogTitle className="text-2xl text-blue-500">

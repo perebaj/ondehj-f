@@ -10,8 +10,8 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
+import Billing from './billing'
 import { Button } from './components/ui/button'
-
 export default function DashboardHeader() {
   return (
     <div className="font-Fredoka">
@@ -42,7 +42,7 @@ export default function DashboardHeader() {
                 Perfil
               </DropdownMenuItem>
               <DropdownMenuItem className="no-underline hover:underline">
-                <a href="/billing">Assinatura</a>
+                <Billing />
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -55,7 +55,7 @@ export default function DashboardHeader() {
           <div className="hidden lg:flex lg:items-center lg:justify-center">
             <Button className="gap-2 bg-primary">
               <CreditCard strokeWidth={1} size={18} />
-              Assinar
+              <Billing />
             </Button>
           </div>
         </div>
