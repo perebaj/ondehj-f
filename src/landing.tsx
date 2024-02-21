@@ -113,7 +113,7 @@ export default function Landing() {
                 </CardContent>
                 <CardFooter>
                   <Button variant={'outline'}>
-                    <a href="/sign-in">Compre Agora</a>
+                    <a href="/sign-in">Assine Agora</a>
                   </Button>
                 </CardFooter>
               </Card>
