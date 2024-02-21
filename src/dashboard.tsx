@@ -38,11 +38,14 @@ export default function Dashboard() {
                 </p>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Perfil</DropdownMenuItem>
+              <DropdownMenuItem>Assinatura</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <a className="hidden lg:flex lg:items-center lg:justify-center lg:gap-2">
+          <a
+            href="/"
+            className="hidden lg:flex lg:items-center lg:justify-center lg:gap-2"
+          >
             <h1 className="text-3xl font-bold">Onde Hoje?</h1>
           </a>
           <div className="hidden lg:flex lg:items-center lg:justify-center">

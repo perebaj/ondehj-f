@@ -74,7 +74,6 @@ export default function Landing() {
           </div>
         </div>
       </section>
-
       <section id="pricing" className="bg-slate-100">
         <div className="mx-auto flex max-w-7xl flex-col gap-12 px-8 py-24 md:flex-row">
           <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 px-8 py-12 lg:gap-12 lg:py-32">
@@ -89,7 +88,7 @@ export default function Landing() {
               </span>
             </h1>
             <div>
-              <Card className="max-h-7xl mx-auto flex max-w-7xl flex-col items-center text-center">
+              <Card className="max-h-7xl mx-auto flex max-w-7xl flex-col items-center text-center shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-4xl">R$ 30 no PIX</CardTitle>
                   <CardDescription>
