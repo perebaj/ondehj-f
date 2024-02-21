@@ -1,7 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import Dashboard from './dashboard'
-import Events from './events'
 import Landing from './landing'
 import SignIn from './signin'
 export const router = createBrowserRouter([
