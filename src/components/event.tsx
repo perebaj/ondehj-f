@@ -1,58 +1,28 @@
-import 'moment/dist/locale/pt-br'
+import { ChevronRightIcon, GraduationCap } from 'lucide-react'
 
-import { ArrowBigUpDash, Instagram } from 'lucide-react'
-import moment from 'moment'
-import { useState } from 'react'
-
-import { Button } from './ui/button'
-
-interface EventProps {
-  name: string
-  date: number
-  instagramURL?: string
-}
-
-export default function Event(props: EventProps) {
-  const [counter, setCounter] = useState(0)
-
-  const handleCounter = () => {
-    setCounter(counter + 1)
-  }
-
-  moment.locale('pt')
-  const date = moment(props.date).format('L')
+export default function Event() {
   return (
-    <div className="w-full divide-y overflow-hidden rounded-lg border border-gray-200">
-      <div className="flex w-full items-center justify-between space-x-4 p-4">
-        <div className="flex flex-col items-center hover:cursor-pointer ">
-          <Button variant="ghost" onClick={handleCounter}>
-            <ArrowBigUpDash
-              className="h-6 w-6 md:h-8 md:w-8"
-              color="#0fe661"
-              strokeWidth={'0.1rem'}
-            />
-            <p>{counter}</p>
-          </Button>
-        </div>
-        <div className="flex flex-1 flex-col">
-          <h3 className="text-sm font-semibold md:text-2xl">{props.name}</h3>
-          <p className="text-[10px] text-gray-500 dark:text-gray-400 md:text-sm">
-            {date}
-          </p>
-        </div>
-        {props.instagramURL && (
-          <a
-            className="inline-flex items-center rounded-md text-[10px]  underline underline-offset-2 hover:no-underline md:text-base "
-            href={props.instagramURL}
-          >
-            <Instagram
-              strokeWidth={'0.12rem'}
-              className="mr-1.5 h-3 w-3 md:h-5 md:w-5"
-            />
-            Instagram
-          </a>
-        )}
-      </div>
+    <div className="flex flex-col items-start justify-start gap-1 rounded-lg border p-4 shadow-md">
+      <span className="inline-flex items-center rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs font-semibold text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
+        <GraduationCap className="mr-1.5 h-4 w-4" />
+        Acadêmico
+      </span>
+      <h3 className="text-2xl font-bold leading-tight text-blue-500">
+        Grupo de estudos cálculo 3 e Cálculo 4
+      </h3>
+      <p className="text-sm/relaxed text-gray-500 dark:text-gray-400">
+        Descrição do evento
+      </p>
+      <time className="mt-auto self-start text-sm font-medium text-gray-500 dark:text-gray-400">
+        Fev 24, 2023, 3:00 PM
+      </time>
+      <a
+        className="inline-flex items-center no-underline hover:underline"
+        href="#"
+      >
+        Veja no Instagram
+        <ChevronRightIcon className="ml-1.5 inline-block h-4 w-4" />
+      </a>
     </div>
   )
 }
