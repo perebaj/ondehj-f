@@ -13,7 +13,7 @@ import {
 
 export default function Billing() {
   return (
-    <DialogContent className="font-Fredoka max-w-xs lg:max-w-2xl">
+    <DialogContent className="max-w-xs lg:max-w-2xl">
       <DialogHeader>
         <div className="flex flex-col  items-center justify-center gap-2 px-4 py-4">
           <DialogTitle className="text-2xl text-blue-500">

@@ -18,7 +18,7 @@ import {
 import { Button } from './components/ui/button'
 export default function Landing() {
   return (
-    <div className="font-Fredoka">
+    <div>
       <header className="bg-slate-50">
         <nav className="mx-auto flex max-w-7xl items-center justify-center px-8 py-3">
           <div className="flex lg:flex-1">

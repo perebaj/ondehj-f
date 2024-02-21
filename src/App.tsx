@@ -7,7 +7,7 @@ import { Toaster } from 'sonner'
 import { router } from './routes'
 export default function App() {
   return (
-    <div>
+    <div className="font-Fredoka">
       <HelmetProvider>
         <Helmet titleTemplate="%s | ondehoje?" />
         <Toaster richColors closeButton />
