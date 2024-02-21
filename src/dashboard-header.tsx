@@ -55,11 +55,11 @@ export default function DashboardHeader() {
           href="/"
           className="hidden lg:flex lg:items-center lg:justify-center lg:gap-2"
         >
-          <h1 className="text-3xl font-bold">Onde Hoje?</h1>
+          <h1 className="text-3xl font-bold">¯\_(ツ)_/¯?</h1>
         </a>
         <div className="hidden lg:flex lg:items-center lg:justify-center">
           <Button className="gap-2 bg-primary">
-            <CreditCard strokeWidth={1} size={18} />
+            <CreditCard strokeWidth={2} size={18} />
             <Dialog>
               <DialogTrigger>Assinatura</DialogTrigger>
               <Billing />
