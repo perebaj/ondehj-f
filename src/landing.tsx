@@ -18,7 +18,7 @@ import {
 import { Button } from './components/ui/button'
 export default function Landing() {
   return (
-    <div className="font-Fredoka">
+    <div>
       <header className="bg-slate-50">
         <nav className="mx-auto flex max-w-7xl items-center justify-center px-8 py-3">
           <div className="flex lg:flex-1">
@@ -57,8 +57,8 @@ export default function Landing() {
             </h1>
             <p className="max-w-md text-center text-sm font-extrabold leading-relaxed text-slate-500 md:text-base">
               Confuso com quantidade de coisas para fazer na sua faculdade? Aqui
-              você encontra todos os eventos esportivos, culturais e festas em
-              um só lugar.
+              você encontra todos os eventos esportivos, acadêmicos, culturais e
+              festas em um só lugar.
             </p>
             <ul className="hidden space-y-1 text-slate-500 md:block">
               <li className="flex items-center justify-center gap-2 lg:justify-start">
@@ -137,8 +137,8 @@ export default function Landing() {
                 <AccordionContent>
                   <p>
                     O Onde Hoje é uma plataforma que reúne todos os eventos
-                    esportivos, culturais e festas da sua universidade em um só
-                    lugar.
+                    esportivos, acadêmicos, culturais e festas da sua
+                    universidade em um só lugar.
                   </p>
                 </AccordionContent>
               </AccordionItem>

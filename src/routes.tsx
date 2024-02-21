@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 
-import Dashboard from './dashboard'
+import Billing from './billing'
+import DashboardHeader from './dashboard-header'
 import Landing from './landing'
 import SignIn from './signin'
 export const router = createBrowserRouter([
@@ -14,6 +15,10 @@ export const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard />,
+    element: <DashboardHeader />,
+  },
+  {
+    path: '/billing',
+    element: <Billing />,
   },
 ])

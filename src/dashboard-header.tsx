@@ -1,6 +1,7 @@
 import { ChevronDown, CreditCard } from 'lucide-react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,13 +11,13 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
+import Billing from './billing'
 import { Button } from './components/ui/button'
-
-export default function Dashboard() {
+export default function DashboardHeader() {
   return (
-    <div className="font-Fredoka">
-      <header className="border-b bg-slate-50">
-        <div className="mx-auto flex items-center justify-center gap-4 py-3 max-lg:px-4 lg:max-w-7xl lg:justify-between">
+    <header className="border-b bg-slate-50">
+      <div className="mx-auto flex items-center justify-center gap-4 py-3 max-lg:px-4 lg:max-w-7xl lg:justify-between">
+        <Dialog>
           <DropdownMenu>
             <DropdownMenuTrigger>
               <div className="mr-auto">
@@ -38,24 +39,34 @@ export default function Dashboard() {
                 </p>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Perfil</DropdownMenuItem>
-              <DropdownMenuItem>Assinatura</DropdownMenuItem>
+              <DropdownMenuItem className="no-underline hover:underline">
+                Perfil
+              </DropdownMenuItem>
+              <DialogTrigger>
+                <DropdownMenuItem className=" no-underline hover:underline">
+                  Assinatura
+                </DropdownMenuItem>
+              </DialogTrigger>
             </DropdownMenuContent>
           </DropdownMenu>
-          <a
-            href="/"
-            className="hidden lg:flex lg:items-center lg:justify-center lg:gap-2"
-          >
-            <h1 className="text-3xl font-bold">Onde Hoje?</h1>
-          </a>
-          <div className="hidden lg:flex lg:items-center lg:justify-center">
-            <Button className="gap-2 bg-primary">
-              <CreditCard strokeWidth={1} size={18} />
-              Assinar
-            </Button>
-          </div>
+          <Billing />
+        </Dialog>
+        <a
+          href="/"
+          className="hidden lg:flex lg:items-center lg:justify-center lg:gap-2"
+        >
+          <h1 className="text-3xl font-bold">Onde Hoje?</h1>
+        </a>
+        <div className="hidden lg:flex lg:items-center lg:justify-center">
+          <Button className="gap-2 bg-primary">
+            <CreditCard strokeWidth={1} size={18} />
+            <Dialog>
+              <DialogTrigger>Assinatura</DialogTrigger>
+              <Billing />
+            </Dialog>
+          </Button>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
   )
 }
