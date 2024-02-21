@@ -12,7 +12,7 @@ import {
 
 import { Button } from './components/ui/button'
 
-export default function Dashboard() {
+export default function DashboardHeader() {
   return (
     <div className="font-Fredoka">
       <header className="border-b bg-slate-50">
@@ -38,8 +38,12 @@ export default function Dashboard() {
                 </p>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Perfil</DropdownMenuItem>
-              <DropdownMenuItem>Assinatura</DropdownMenuItem>
+              <DropdownMenuItem className="no-underline hover:underline">
+                Perfil
+              </DropdownMenuItem>
+              <DropdownMenuItem className="no-underline hover:underline">
+                <a href="/billing">Assinatura</a>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <a
