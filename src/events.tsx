@@ -4,7 +4,7 @@
 //   MusicIcon,
 //   UsersIcon,
 // } from 'lucide-react'
-import Event2 from './components/event'
+import Event from './components/event'
 
 export default function Events() {
   return (
@@ -21,12 +21,12 @@ export default function Events() {
       </div>
       <div className="container grid max-w-6xl justify-center gap-4 px-4 py-4 md:px-6 md:py-6">
         <div className="grid grid-cols-1 items-stretch justify-center gap-4 md:grid-cols-2">
-          <Event2 />
-          <Event2 />
-          <Event2 />
-          <Event2 />
-          <Event2 />
-          <Event2 />
+          <Event />
+          <Event />
+          <Event />
+          <Event />
+          <Event />
+          <Event />
         </div>
       </div>
     </div>

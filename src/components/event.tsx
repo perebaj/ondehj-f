@@ -1,8 +1,8 @@
 import { ChevronRightIcon, GraduationCap } from 'lucide-react'
 
-export default function Event2() {
+export default function Event() {
   return (
-    <div className="flex flex-col items-start justify-start gap-1 rounded-lg border p-4">
+    <div className="flex flex-col items-start justify-start gap-1 rounded-lg border p-4 shadow-md">
       <span className="inline-flex items-center rounded-full border border-gray-200 bg-gray-100 px-2.5 py-1 text-xs font-semibold text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-50">
         <GraduationCap className="mr-1.5 h-4 w-4" />
         Acadêmico
