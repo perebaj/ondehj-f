@@ -1,3 +1,4 @@
+import { useUser } from '@clerk/clerk-react'
 import { Check, PartyPopper } from 'lucide-react'
 
 import {
@@ -14,9 +15,29 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
+import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 
+import Billing from './billing'
 import { Button } from './components/ui/button'
-export default function Landing() {
+export default function LandingPage() {
+  const { isSignedIn } = useUser()
+
+  // Redirect to eventsPage if user is signed in
+  const redirect = isSignedIn ? '/events' : '/sign-up'
+
+  const payment = isSignedIn ? (
+    <Button variant={'outline'}>
+      <Dialog>
+        <DialogTrigger>Assine Agora</DialogTrigger>
+        <Billing />
+      </Dialog>
+    </Button>
+  ) : (
+    <Button variant={'outline'}>
+      <a href="/sign-up">Assine Agora</a>
+    </Button>
+  )
+
   return (
     <div>
       <header className="bg-slate-50">
@@ -38,10 +59,17 @@ export default function Landing() {
             >
               FAQ
             </a>
+            <a
+              className="no-underline hover:underline"
+              title="eventsPage"
+              href="/events"
+            >
+              Eventos
+            </a>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Button size={'sm'}>
-              <a href="/sign-in">Entrar</a>
+              <a href={redirect}>Entrar</a>
             </Button>
           </div>
         </nav>
@@ -69,7 +97,7 @@ export default function Landing() {
               </li>
             </ul>
             <Button size={'lg'}>
-              <a href="/sign-in">Onde é o rolê hoje?</a>
+              <a href={redirect}>Onde é o rolê hoje?</a>
             </Button>
           </div>
         </div>
@@ -110,11 +138,10 @@ export default function Landing() {
                     </li>
                   </ul>
                 </CardContent>
-                <CardFooter>
-                  <Button variant={'outline'}>
-                    <a href="/sign-in">Assine Agora</a>
-                  </Button>
-                </CardFooter>
+                <CardFooter>{payment}</CardFooter>
+                <p className="mb-2 mt-2 text-xs text-gray-500">
+                  * Pagamento único, sem renovação automática
+                </p>
               </Card>
             </div>
           </div>
