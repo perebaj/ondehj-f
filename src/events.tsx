@@ -1,10 +1,3 @@
-// import {
-//   ChevronRightIcon,
-//   GraduationCap,
-//   MusicIcon,
-//   UsersIcon,
-// } from 'lucide-react'
-
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
@@ -54,12 +47,34 @@ export default function Events() {
       </div>
       <div className="container grid max-w-6xl justify-center gap-4 px-4 py-4 md:px-6 md:py-6">
         <div className="grid grid-cols-1 items-stretch justify-center gap-4 md:grid-cols-2">
-          <Event />
-          <Event />
-          <Event />
-          <Event />
-          <Event />
-          <Event />
+          <Event
+            date={Date.now()}
+            description="Descrição"
+            name="Festa na Moscou"
+            instagramURL="https://www.instagram.com/repmoscou/"
+            type="social"
+          />
+          <Event
+            date={Date.now()}
+            description="Descrição"
+            name="Festa meteorica avassaladora open 192 horas na Moscou"
+            instagramURL="https://www.instagram.com/repmoscou/"
+            type="academico"
+          />
+          <Event
+            date={Date.now()}
+            description="Descrição"
+            name="Festa na Moscou"
+            instagramURL="https://www.instagram.com/repmoscou/"
+            type="esportivo"
+          />
+          <Event
+            date={Date.now()}
+            description="Descrição"
+            name="Festa na Moscou"
+            instagramURL="https://www.instagram.com/repmoscou/"
+            type="cultural"
+          />
         </div>
       </div>
     </div>
