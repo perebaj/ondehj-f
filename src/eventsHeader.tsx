@@ -5,7 +5,7 @@ import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 
 import Billing from './billing'
 import { Button } from './components/ui/button'
-export default function DashboardHeader() {
+export default function EventsHeader() {
   return (
     <header className="border-b bg-slate-50">
       <div className="mx-auto flex items-center justify-center gap-4 py-3 max-lg:px-4 lg:max-w-7xl lg:justify-between">

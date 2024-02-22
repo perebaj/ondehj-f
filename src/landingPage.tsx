@@ -19,11 +19,11 @@ import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 
 import Billing from './billing'
 import { Button } from './components/ui/button'
-export default function Landing() {
+export default function LandingPage() {
   const { isSignedIn } = useUser()
 
-  // Redirect to dashboard if user is signed in
-  const redirect = isSignedIn ? '/dashboard' : '/sign-up'
+  // Redirect to eventsPage if user is signed in
+  const redirect = isSignedIn ? '/events' : '/sign-up'
 
   const payment = isSignedIn ? (
     <Button variant={'outline'}>
@@ -61,10 +61,10 @@ export default function Landing() {
             </a>
             <a
               className="no-underline hover:underline"
-              title="Dashboard"
-              href="/dashboard"
+              title="eventsPage"
+              href="/events"
             >
-              Dashboard
+              Eventos
             </a>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">

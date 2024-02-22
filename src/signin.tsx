@@ -7,8 +7,8 @@ export default function SignInPage() {
         path="/sign-in"
         routing="path"
         signUpUrl="/sign-up"
-        afterSignInUrl={'/dashboard'}
-        afterSignUpUrl={'/dashboard'}
+        afterSignInUrl={'/events'}
+        afterSignUpUrl={'/events'}
       />
     </div>
   )

@@ -1,10 +1,10 @@
 import { SignedIn, useUser } from '@clerk/clerk-react'
 
 import { Button } from './components/ui/button'
-import DashboardHeader from './dashboard-header'
 import Events from './events'
+import EventsHeader from './eventsHeader'
 
-export default function Dashboard() {
+export default function EventsPage() {
   const { isSignedIn } = useUser()
 
   if (isSignedIn === undefined) {
@@ -31,7 +31,7 @@ export default function Dashboard() {
   return (
     <div>
       <SignedIn>
-        <DashboardHeader />
+        <EventsHeader />
         <Events />
       </SignedIn>
     </div>
