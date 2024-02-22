@@ -15,13 +15,28 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
+import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 
+import Billing from './billing'
 import { Button } from './components/ui/button'
 export default function Landing() {
   const { isSignedIn } = useUser()
 
   // Redirect to dashboard if user is signed in
   const redirect = isSignedIn ? '/dashboard' : '/sign-up'
+
+  const payment = isSignedIn ? (
+    <Button variant={'outline'}>
+      <Dialog>
+        <DialogTrigger>Assine Agora</DialogTrigger>
+        <Billing />
+      </Dialog>
+    </Button>
+  ) : (
+    <Button variant={'outline'}>
+      <a href="/sign-up">Assine Agora</a>
+    </Button>
+  )
 
   return (
     <div>
@@ -123,11 +138,10 @@ export default function Landing() {
                     </li>
                   </ul>
                 </CardContent>
-                <CardFooter>
-                  <Button variant={'outline'}>
-                    <a href="/sign-up">Assine Agora</a>
-                  </Button>
-                </CardFooter>
+                <CardFooter>{payment}</CardFooter>
+                <p className="mb-2 mt-2 text-xs text-gray-500">
+                  * Pagamento único, sem renovação automática
+                </p>
               </Card>
             </div>
           </div>
