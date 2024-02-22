@@ -11,8 +11,50 @@ import {
 
 import Event from './components/event'
 import EventForms from './components/eventforms'
-
 export default function Events() {
+  const bodyText = `
+  Estão preparados para o role mais animado da semana de recepção????? Te esperamos na QUIMI REMEXE MUITO!!!
+
+  🔥Fiquem atentos no nosso insta para acompanhar todas as novidades: @roles_da_química_ccq 🔥
+
+  DATA: 29/02 às 16h
+
+  OPEN
+  • COROTE SABORES
+  • VODKA
+  • ENERGÉTICO
+  • REFRI
+  • ÁGUA
+
+  BOOMS
+  • TEQUILA 🧊
+  • Pina Colada 🍹
+
+  ATRAÇÕES
+  • DJ GUMPIN
+  • DJ Rick
+  • Pagoderia
+
+  ⛔ ATENÇÃO: HAVERÁ VENDA DE CHOPP 🍻 NO ROLÊ
+
+  Então não pastela e já garanta o seu ingresso no precinho!!
+
+  💸 LOTE BIXO: R$ 15,00
+  💸 PRIMEIRO LOTE: R$ 21,00
+
+  Compre sem taxa com um dos nossos promoters:
+
+  Figs: https://wa.me/qr/QQYAF7C7HADNM1
+
+  Fisk: https://wa.me/qr/Y44S3ZPCYNJ6O1
+
+  Miranha: https://wa.me/qr/GISQMR2TKPUIB1
+
+  Fuleco: https://wa.me/qr/ZVSCMF645WU6G1
+
+  Ou direto pelo nosso site: https://cheers.com.br/evento/quimi-remexe-muito-13907
+  `
+
   return (
     <div className="w-full py-10 lg:py-14">
       <div className="container grid items-center gap-4 px-4 py-4 text-center md:px-6 md:py-6">
@@ -49,8 +91,8 @@ export default function Events() {
         <div className="grid grid-cols-1 items-stretch justify-center gap-4 md:grid-cols-2">
           <Event
             date={Date.now()}
-            description="Descrição"
-            name="Festa na Moscou"
+            description={bodyText}
+            name="QUIMI REMEXE MUITO"
             instagramURL="https://www.instagram.com/repmoscou/"
             type="social"
           />

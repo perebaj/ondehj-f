@@ -12,7 +12,7 @@ export default function EventsHeader() {
         <UserButton afterSignOutUrl="/" />
         <a
           href="/"
-          className="hidden lg:flex lg:items-center lg:justify-center lg:gap-2"
+          className="lg:flex lg:items-center lg:justify-center lg:gap-2"
         >
           <h1 className="text-3xl font-bold">¯\_(ツ)_/¯?</h1>
         </a>
