@@ -28,8 +28,7 @@ export default function Billing() {
           <p className="flex flex-col items-center justify-center py-2 text-3xl">
             <span className=" font-extrabold  text-green-500">R$ 30,00</span>{' '}
             <span className="">
-              Acesso <span className="font-extrabold">ilimitado</span>{' '}
-              <span>o ano todo!</span>
+              Acesso <span className="font-extrabold">ilimitado!</span>
             </span>
           </p>
           <QRCodeSVG className="h-64 w-64" value="https://reactjs.org/" />
