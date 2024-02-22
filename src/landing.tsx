@@ -1,3 +1,4 @@
+import { useUser } from '@clerk/clerk-react'
 import { Check, PartyPopper } from 'lucide-react'
 
 import {
@@ -17,6 +18,11 @@ import {
 
 import { Button } from './components/ui/button'
 export default function Landing() {
+  const { isSignedIn } = useUser()
+
+  // Redirect to dashboard if user is signed in
+  const redirect = isSignedIn ? '/dashboard' : '/sign-up'
+
   return (
     <div>
       <header className="bg-slate-50">
@@ -38,10 +44,17 @@ export default function Landing() {
             >
               FAQ
             </a>
+            <a
+              className="no-underline hover:underline"
+              title="Dashboard"
+              href="/dashboard"
+            >
+              Dashboard
+            </a>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Button size={'sm'}>
-              <a href="/sign-in">Entrar</a>
+              <a href={redirect}>Entrar</a>
             </Button>
           </div>
         </nav>
@@ -69,7 +82,7 @@ export default function Landing() {
               </li>
             </ul>
             <Button size={'lg'}>
-              <a href="/sign-in">Onde é o rolê hoje?</a>
+              <a href={redirect}>Onde é o rolê hoje?</a>
             </Button>
           </div>
         </div>
@@ -112,7 +125,7 @@ export default function Landing() {
                 </CardContent>
                 <CardFooter>
                   <Button variant={'outline'}>
-                    <a href="/sign-in">Assine Agora</a>
+                    <a href="/sign-up">Assine Agora</a>
                   </Button>
                 </CardFooter>
               </Card>
