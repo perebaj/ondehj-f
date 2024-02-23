@@ -17,8 +17,8 @@ import {
 } from '@/components/ui/card'
 import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 
-import Billing from './billing'
-import { Button } from './components/ui/button'
+import Billing from '../billing'
+import { Button } from '../components/ui/button'
 export default function LandingPage() {
   const { isSignedIn } = useUser()
 

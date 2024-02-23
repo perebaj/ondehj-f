@@ -9,8 +9,8 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 
-import Event from './components/event'
-import EventForms from './components/eventforms'
+import Event from '../components/event'
+import EventForms from '../components/eventforms'
 export default function Events() {
   const bodyText = `
   Estão preparados para o role mais animado da semana de recepção????? Te esperamos na QUIMI REMEXE MUITO!!!
