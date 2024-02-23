@@ -3,8 +3,8 @@ import { CreditCard } from 'lucide-react'
 
 import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 
-import Billing from './billing'
-import { Button } from './components/ui/button'
+import Billing from '../billing'
+import { Button } from './ui/button'
 export default function EventsHeader() {
   return (
     <header className="border-b bg-slate-50">
