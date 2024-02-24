@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
 
-import EventsPage from './eventsPage'
-import LandingPage from './landingPage'
-import SignInPage from './signin'
-import SignUpPage from './signup'
+import EventsPage from '../eventsPage'
+import LandingPage from '../pages/landingPage'
+import SignInPage from '../pages/signin'
+import SignUpPage from '../pages/signup'
 export const router = createBrowserRouter([
   {
     path: '/',

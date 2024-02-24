@@ -1,8 +1,8 @@
 import { SignedIn, useUser } from '@clerk/clerk-react'
 
 import { Button } from './components/ui/button'
-import Events from './events'
-import EventsHeader from './eventsHeader'
+import Events from './pages/events'
+import EventsHeader from './components/eventsHeader'
 
 export default function EventsPage() {
   const { isSignedIn } = useUser()
